@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+
+import subprocess
+print("Here is the menu: ")
+print(" > 1. Show Date")
+print(" > 2. Show Calender")
+print(" > 3. Show who you are!!")
+print(" > 4. List the files in this directory")
+print(" > 5. Exit")
+
+num = int(input("Select 1/2/3/4/5 "))
+
+if(num==1):
+    outp = subprocess.getoutput("date")
+    print(outp)
+elif(num==2):
+    outp = subprocess.getoutput("cal")
+    print(outp)
+elif(num==3):
+    outp = subprocess.getoutput("whoami")
+    print(outp)
+elif(num==4):
+    outp = subprocess.getoutput("ls")
+    print(outp)
+elif(num==5):
+    print("See you later...")
